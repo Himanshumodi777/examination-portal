@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome sign up form </title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+      
+      
+   	<script type="text/javascript">
+		
+		
+		 function validate()
+		 {
+		 	
+           
+            var pwd=document.getElementById('pwd').value;
+            var cpwd=document.getElementById('cpwd').value;
+            var mb=document.getElementById('mb').value;
+           
+            if(pwd.length<1)
+            {
+            	alert("password Is required");
+            	return false;
+            }
+            if(cpwd.length<1)
+            {
+            	alert("cpass Is required");
+            	return false;
+            }
+            if(mb.length<1)
+            {
+            	alert("Mobile Is required");
+            	return false;
+            }
+            if(pwd!=cpwd)
+            {
+
+                    alert("Both Pass Not Match");
+                    return false;            	
+            }
+            if(mb.length!=10)
+            {
+            	alert("Only Enter 10 digits");
+            	return false;
+            }
+            if(isNaN(mb))
+            {
+
+               alert("Only Enter Numeric Values");
+               return false;            	
+            }
+            return true;
+		 	
+		 }
+		 function checkname()
+		 {
+
+             var nm=document.getElementById('nm').value;
+             if(nm.length<1)
+             {
+             	  document.getElementById('spn').innerHTML="*";
+             	  document.getElementById('spn').style.color="red";
+            	
+             }  
+             else
+             {
+             	 document.getElementById('spn').innerHTML="";
+             } 		 	
+		 }
+
+	</script>
+   </head>
+
+<body>
+
+  <html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Sign up</title>
+</head>
+
+<body>
+  <div class="main" align="center">
+    <p class="su">Sign up</p>
+    <form class="form1" align="center" action="studentsignup.jsp">
+      <input class="first" type="text" name="id" id="id" placeholder="Enter Id" required autofocus>
+       <input class="pass1" type="password" name="pass" id="pwd" placeholder="Choose Password" required>
+      <input class="pass2" type="password" name="cpass" id="cpwd" placeholder="Retype Password" required>
+ 
+       <input class="first" type="text" name="nm" id="nm" placeholder="First Name" required autofocus>
+       <input class="first" type="text" name="lm" id="lm" placeholder="Last Name" required autofocus>
+      <input class="mail" type="email" name="em" id="em" placeholder="Email Address" required>
+       <input placeholder="DOB" class="cal" type="date" name="dt" id="dt" required>
+       <input class="first" type="text" name="cn" id="mb" placeholder="Contact no" required autofocus>
+      <select name="br" class="country" required>
+                <option value="" disabled selected hidden="">Branche</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ME">ME</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="EC">EC</option>
+                
+            </select>
+             <input class="first" type="text" name="ad" id="ad" placeholder="Address" required autofocus>
+      <div class="gen">
+        <p>Gendar:</p>
+        <input type="radio" name="gen" value="male"> Male
+        <br>
+        <input type="radio" name="gen" value="female"> Female
+        <br>
+      <input class="submit" type="submit" value="Sign up" align="center"> </form>
+  </div>
+  <div class="bottom">
+    <p class="mb" align="center"><strong>-</strong> Login here <a href="studentlogin.html" target="_blank"><span class="mb-2">Click</span></a></p>
+  </div>
+</body>
+
+</html>
+  
+  
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		
+		 function validate()
+		 {
+		 	
+            var id=document.getElementById('id').value;
+            var pass=document.getElementById('pass').value;
+            var cpass=document.getElementById('cpass').value;
+            var nm=document.getElementById('nm').value;
+            var lm=document.getElementById('lm').value;
+             var dt=document.getElementById('dt').value;
+
+            var cn=document.getElementById('cn').value;
+             var ad=document.getElementById('ad').value;
+            var gen=document.getElementById('gen').value;
+           
+            if(id.length<1)
+            {
+            	alert("ID Is required");
+            	return false;
+            }
+            if(pass.length<1)
+            {
+            	alert("password Is required");
+            	return false;
+            }
+            if(pass!=cpass)
+            {
+
+                    alert("Both Pass Not Match");
+                    return false;            	
+            }
+
+             if(nm.length<1)
+            {
+              alert("name Is required");
+              return false;
+            }
+
+            if(lm.length<1)
+            {
+            	alert("last name Is required");
+            	return false;
+            }
+            if(em.length<1)
+            {
+            	alert("Email Is required");
+            	return false;
+            }
+
+              if(dt.length<1)
+            {
+              alert("date Is required");
+              return false;
+            }
+
+            if(cn.length<1)
+            {
+            	alert("CONTACT Is required");
+            	return false;
+            }
+
+              if(ad.length<1)
+            {
+              alert("ADDRESS Is required");
+              return false;
+            }
+
+               if(gen.length<1)
+            {
+              alert("gender Is required");
+              return false;
+            }
+            if(cn.length!=10)
+            {
+            	alert("Only Enter 10 digits");
+            	return false;
+            }
+            if(isNaN(cn))
+            {
+
+               alert("Only Enter Numeric Values");
+               return false;            	
+            }
+            return true;
+		 	
+		 }
+		
+
+	</script>
+</head>
+
+<body background="Desert.jpg";
+width=100px
+height=100px>
+
+<h1>
+
+ 
+ <h2> <marquee>WELCOME TO  ADMIN SIGNUP PAGE!!!</marquee> </h2>
+
+  <hr>
+  <a href="http://cdgi.edu.in/contact-us.php"> about us</a>
+  
+<form action="adminsignup.jsp">
+<table align="center"  style="background-color:rgba(255,255,255,0.6)";>
+<tr>
+  <td>ID</td>
+  <td><input type="text" name="id" id="id" onblur="checkname()"><span id="spn"></span></td>
+</tr>
+
+<tr>
+  <td>Password</td>
+  <td><input type="password" name="pass" id="pass"></td> 
+</tr>	
+
+      <tr>
+        <td>FIRST NAME</td>
+        <td><input type="text" name="nm" id="nm" alert="name Is required"></td>
+      </tr>
+      
+        <tr>
+        <td>LAST NAME</td>
+        <td><input type="text" name="lm" id="lm"></td>
+      </tr>
+      
+         <tr>
+        <td>Email</td>
+        <td><input type="text" name="em" id="em"></td>
+      </tr>
+      
+      
+
+      <tr>
+        <td>DOB</td>
+      <td>  <input type="text"  id="dt"  name="dt"></td>
+        
+      
+      </tr>
+      
+      <tr>
+        <td>CONTACT NO</td>
+        <td><input type="text" name="cn" id="cn"></td>
+      </tr>
+      
+      
+    <tr>
+        <td>Address</td>
+        <td><input type="textarea" hight="50" width="100" name="ad" id="ad"></td>
+      </tr>
+      
+      <tr>
+        <td>GENDER</td>
+        <td>
+          Male <input type="radio" value="male" name="gen" id="gen">
+          FeMale <input type="radio" value="female" name="gen" id="gen">
+
+        </td>
+      </tr>
+    
+      
+      
+     <tr>
+<td align="center" colspan="2"><input type="submit" name="btn" value="Click Me!" onclick="return validate()"></td>
+</tr>
+
+</table>
+</form>
+</body>
+
+</html>
